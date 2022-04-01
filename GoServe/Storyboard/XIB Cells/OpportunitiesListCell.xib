@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -135,11 +135,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="attachImageView" destination="c8I-0U-a1h" id="Izk-Cu-7Kr"/>
                 <outlet property="attactBtn" destination="1Id-qB-jfo" id="fgJ-9u-V2A"/>
                 <outlet property="descriptionLbl" destination="eZ3-YG-l1m" id="XS9-n5-2Q5"/>
                 <outlet property="imgBtn" destination="l4o-fS-8qH" id="0UW-cn-AsN"/>
                 <outlet property="imgCell" destination="rho-Gd-h5d" id="TG3-Cf-RVQ"/>
                 <outlet property="nameLbl" destination="dWF-M1-qow" id="pjB-xr-zf7"/>
+                <outlet property="timeLabelHeight" destination="x0n-Xz-Bi0" id="3yf-8t-Jr2"/>
                 <outlet property="timeLbl" destination="AIs-ak-bwc" id="1A3-Gp-rva"/>
             </connections>
             <point key="canvasLocation" x="200.625" y="182.74647887323943"/>

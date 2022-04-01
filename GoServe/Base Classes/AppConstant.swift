@@ -44,8 +44,8 @@ enum DeviceType: String {
 struct Constant {
     static let appName = "GO SERVE"
     static let alertAppName = "GoServe"
-//    static let appBaseUrl = "http://161.97.132.85/goServeLatest/Api/" // staging
-    static let appBaseUrl = "http://www.goserveapp.com/goServeLatest/Api/" // live
+    static let appBaseUrl = "http://161.97.132.85/goServeLatest/Api/" // staging
+//    static let appBaseUrl = "http://www.goserveapp.com/goServeLatest/Api/" // live
     
     static let check = "rad"
     static let uncheck = "radio"
@@ -194,6 +194,7 @@ enum ApiNetworkConstant: String {
     case filterOpportunities = "filterOpportunities"
     case notificationActivity = "notificationActivity"
     case getAllOpportunitiesByType = "getAllOpportunitiesByType"
+    case getAllOpportunitiesByTypev2 = "getAllOpportunitiesByTypev2"
     case getAllOrganizationForStudent = "getAllOrganizationForStudent"
     case checkGoogleAppleTokenExistsByType = "checkGoogleAppleTokenExistsByType"
     case getAllComingPastOpportunitiesByType = "getAllComingPastOpportunitiesByType"

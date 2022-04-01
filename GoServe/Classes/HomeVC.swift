@@ -97,7 +97,7 @@ class HomeVC: BaseVC {
 //        }
         self.alertLabel.isHidden = true
         SVProgressHUD.show(withStatus: "Loading...")
-        let url = getFinalUrl(lastComponent: .getAllOpportunitiesByType)
+        let url = getFinalUrl(lastComponent: .getAllOpportunitiesByTypev2)
         AFWrapperClass.requestPostWithMultiFormData(url, params: generatingParams(), headers: nil) { response in
             print(response)
             opportunitiesResponse = self.getApiResponse(response: response)
@@ -244,15 +244,37 @@ extension HomeVC : UITableViewDelegate,UITableViewDataSource {
             cell.nameLbl.text = self.opportunitiesResponseData?[indexPath.row].title
             cell.descriptionLbl.text = self.opportunitiesResponseData?[indexPath.row].description
             cell.timeLbl.text = self.opportunitiesResponseData?[indexPath.row].opHour
+            if let isAds = self.opportunitiesResponseData?[indexPath.row].isAds {
+                if isAds == "1" {
+                    cell.timeLbl.isHidden = true
+                    cell.timeLabelHeight.constant = 0
+                    cell.attactBtn.isHidden = true
+                    cell.attachImageView.isHidden = true
+                } else {
+                    cell.timeLbl.isHidden = false
+                    cell.attachImageView.isHidden = false
+                    cell.attactBtn.isHidden = false
+                    cell.timeLabelHeight.constant = 20
+                }
+            }
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = NavigationManager.shared.detail
-        
-        controller.opportunitiesData = self.opportunitiesResponseData?[indexPath.row]
-        self.push(controller: controller, animated: true)
+        if let isAds = self.opportunitiesResponseData?[indexPath.row].isAds {
+            if isAds == "1" {
+                if let isLink = self.opportunitiesResponseData?[indexPath.row].link {
+                    let link = URL(string: isLink)!
+                    UIApplication.shared.openURL(link)
+                }
+            } else {
+                let controller = NavigationManager.shared.detail
+                
+                controller.opportunitiesData = self.opportunitiesResponseData?[indexPath.row]
+                self.push(controller: controller, animated: true)
+            }
+        }
     }
     
     @objc func showAttachView(sender : UIButton) {

@@ -59,6 +59,8 @@ struct OpportunitiesData : Codable {
     let dayDiff : String?
     let startTimeForAddEvent : String?
     let endTimeForAddEvent : String?
+    let isAds : String?
+    let link : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -88,6 +90,8 @@ struct OpportunitiesData : Codable {
         case dayDiff = "dayDiff"
         case startTimeForAddEvent = "startTimeForAddEvent"
         case endTimeForAddEvent = "endTimeForAddEvent"
+        case isAds = "isAds"
+        case link = "link"
     }
 
     init(from decoder: Decoder) throws {
@@ -118,6 +122,8 @@ struct OpportunitiesData : Codable {
         dayDiff = try values.decodeIfPresent(String.self, forKey: .dayDiff)
         startTimeForAddEvent = try values.decodeIfPresent(String.self, forKey: .startTimeForAddEvent)
         endTimeForAddEvent = try values.decodeIfPresent(String.self, forKey: .endTimeForAddEvent)
+        isAds = try values.decodeIfPresent(String.self, forKey: .isAds)
+        link = try values.decodeIfPresent(String.self, forKey: .link)
     }
 
 }

@@ -10,11 +10,13 @@ import UIKit
 class OpportunitiesListCell: UITableViewCell {
     
     @IBOutlet weak var imgCell: UIImageView!
+    @IBOutlet weak var attachImageView: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var attactBtn: UIButton!
     @IBOutlet weak var imgBtn: UIButton!
+    @IBOutlet weak var timeLabelHeight: NSLayoutConstraint!
     
 
     override func awakeFromNib() {

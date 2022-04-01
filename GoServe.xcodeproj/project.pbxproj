@@ -1008,7 +1008,7 @@
 				CODE_SIGN_ENTITLEMENTS = GoServe/GoServe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = H38582986Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoServe/Info.plist;
@@ -1027,7 +1027,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.goserve.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Goserve Dev 11 Jan2021";
@@ -1046,7 +1046,7 @@
 				CODE_SIGN_ENTITLEMENTS = GoServe/GoServe.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 24;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = H38582986Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GoServe/Info.plist;
@@ -1065,7 +1065,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.goserve.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Goserve Dev 11 Jan2021";
