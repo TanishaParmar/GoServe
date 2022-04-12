@@ -102,7 +102,7 @@ class SignUpVC: BaseVC,UITextFieldDelegate,UITextViewDelegate,UIPickerViewDelega
                 firstnameTF.text = userProfile.givenName
                 lastNameTF.text = userProfile.familyName
                 usernameTF.text = userProfile.name
-                googleImg = userProfile.imageURL(withDimension: 120).path
+                googleImg = userProfile.imageURL(withDimension: 500).absoluteString
             }
             if let token = userData.userID {
                 googleToken = token
@@ -124,7 +124,6 @@ class SignUpVC: BaseVC,UITextFieldDelegate,UITextViewDelegate,UIPickerViewDelega
         lastNameTF.text = lastName
         emailTF.text = emailString
         googleToken = token
-        
     }
     
     @IBAction func signUpBtn(_ sender: UIButton) {

@@ -106,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appdelegate.window?.rootViewController = nav
     }
     
-    func moveToLogInScreen(){
+    func moveToLogInScreen() {
         GIDSignIn.sharedInstance()?.signOut()
         let appdelegate = UIApplication.shared.delegate as! AppDelegate
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
